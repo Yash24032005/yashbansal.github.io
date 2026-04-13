@@ -4,7 +4,7 @@ Welcome to my personal portfolio website!
 This project showcases my skills, projects, and experience in a clean and interactive way.
 
 ## 🚀 Live Demo
-👉 Live link will be added soon.
+(https://yashbansal-github-io.vercel.app/)
 
 ---
 
