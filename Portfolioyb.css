@@ -672,3 +672,12 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+
+/* Line 58 ka fix */
+.main-hero-img {
+  position: absolute;
+  top: 200px;
+  right: 150px;
+  width: 30%;
+  z-index: 10; /* Optional: Agar image kisi cheez ke peeche chhup rahi ho */
+}
