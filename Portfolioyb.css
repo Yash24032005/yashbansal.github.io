@@ -381,7 +381,7 @@ section .button button:hover {
 
 .services .boxes .box:hover {
   background: #4070f4;
-  color: #fff;
+  color:#F0F8FF;
 }
 
 .services .boxes .box .icon {
@@ -680,4 +680,186 @@ nav ul li a:hover::after {
   right: 150px;
   width: 30%;
   z-index: 10; /* Optional: Agar image kisi cheez ke peeche chhup rahi ho */
+}
+/* =========================
+   PROJECT SECTION STYLING (Updated with Images)
+   ========================= */
+
+.projects-section {
+  background: white; /* Aapki theme ke hisaab se light background */
+  padding: 50px 0;
+}
+
+.project-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.project-box {
+  position: relative;
+  min-height: 320px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Text bottom mein rahega */
+  background-color: #1a1e23;
+  border: 1px solid #333;
+}
+
+/* Image Layer */
+.project-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1; 
+  transition: transform 0.5s ease;
+}
+
+/* Dark Gradient Overlay */
+.project-box::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, rgba(0,0,0,0.1) 100%);
+  z-index: 2;
+}
+/* Note: Forward slash (/) use karo aur extension sahi rakho */
+.bg-food::before { background-image: url('assets/bg-food.png'); }
+.bg-finscope::before { background-image: url('assets/bg-finscope.png'); }
+.bg-resort::before { background-image: url('assets/bg-resort.png'); }
+.bg-quiz::before { background-image: url('assets/bg-quiz.png'); }
+.bg-portfolio::before { background-image: url('assets/bg-portfolio.png'); }
+
+/* Home background ke liye bhi check karo */
+.home {
+  background: url("assets/background.jpg") no-repeat; 
+  background-size: cover;
+}
+/* Content on Top */
+.project-box .topic, 
+.project-box p, 
+.project-box .view-btn {
+  position: relative;
+  z-index: 3;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.project-box .topic {
+  color: #4070f4 !important; /* Theme Blue */
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px; /* Title aur description ke beech gap */
+  line-height: 1.2;
+}
+
+.project-box p {
+  color: #ffffff !important;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  opacity: 0.85;
+  /* Vendor Prefixes for older browsers */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  /* Standard Property first */
+  line-clamp: 3; 
+  overflow: hidden;
+}
+
+.project-box .view-btn {
+  color: #4070f4;
+  font-size: 15px;
+  font-weight: 600;
+  padding-bottom: 25px; /* Card ke bottom se distance */
+  display: inline-block; /* Width full na ho taaki hover sahi dikhe */
+  transition: 0.3s ease;
+}
+
+.project-box:hover .view-btn {
+  letter-spacing: 1px; /* Hover par button thoda expand hoga */
+  color: #fff; /* Button hover par white ho jayega background blue hone par */
+}
+/* Hover Effect: Zoom Background */
+.project-box:hover::before {
+  transform: scale(1.1);
+}
+
+.project-box:hover {
+  box-shadow: 0 10px 20px rgba(64, 112, 244, 0.2);
+}
+
+/* --- Modal Styling (Keeping your cross button fixes) --- */
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(26, 30, 35, 0.95);
+  max-width: 650px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+  border: 1px solid rgba(64, 112, 244, 0.3);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  animation: modalIn 0.3s ease-out;
+}
+
+@keyframes modalIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.close-modal:hover {
+  background: #4070f4;
+  transform: rotate(90deg);
+}
+
+/* Tag badge for Modal */
+.tag-badge {
+  background: rgba(64, 112, 244, 0.1);
+  color: #4070f4;
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 12px;
+  border: 1px solid rgba(64, 112, 244, 0.2);
 }

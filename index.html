@@ -30,6 +30,7 @@
   <li><a href="#home">Home</a></li>
   <li><a href="#about">About</a></li>
   <li><a href="#skills">Skills</a></li>
+  <li><a href="#projects">My Projects</a></li>
   <li><a href="#services">Services</a></li>
   <li><a href="#contact">Contact</a></li>
   <li>
@@ -74,7 +75,7 @@
 
     </div> -->
     <div class="Right">
-  <img src="jd58ny5s.png" alt="Hero Image" class="main-hero-img">
+  <img src="assets\jd58ny5s.png" alt="Hero Image" class="main-hero-img">
 </div>
   </section>
 
@@ -84,7 +85,7 @@
       <div class="title"><span>About Me</span></div>
       <div class="about-details">
         <div class="left">
-          <img src="creator.jpeg" alt="Creator Photo">
+          <img src="assets\creator.jpeg" alt="Creator Photo">
         </div>
         <div class="right">
           <div class="topic">Designing Is My Passion</div>
@@ -92,7 +93,7 @@
              Design isn't just a skill, it's a passion. As a B.Tech Computer Science and Engineering student, I find immense satisfaction in the creative process, whether it's crafting visually appealing graphics, editing engaging videos, or designing intuitive user interfaces for apps and websites. My involvement in technical clubs has further fueled this drive to create impactful digital experiences.
           </p>
           <div class="button">
-	    <a href="PDF RESUME.pdf">
+	    <a href="assets\PDF RESUME.pdf">
             <button>Download CV</button></a>
           </div>
         </div>
@@ -151,6 +152,55 @@
       </div>
     </div>
   </section>
+
+  <!-- My projects Section Start -->
+
+<section class="projects-section" id="projects">
+  <div class="content">
+    <div class="title"><span>My Projects</span></div>
+
+   <div class="project-boxes">
+  <div class="project-box bg-food" onclick="openModal('Food Delivery App', 'Engineered a responsive MERN-based food ordering system with a user-centric interface, real-time updates, and seamless end-to-end transaction handling.', ['MongoDB', 'Express', 'React', 'Node.js'], 'https://yash24032005.github.io/Food-delivery-frontend/')">
+    <div class="topic">Food Delivery App</div>
+    <p>Full-stack application with a sleek React frontend.</p>
+    <span class="view-btn">View Details →</span>
+  </div>
+
+  <div class="project-box bg-finscope" onclick="openModal('FinScope Pro', 'Developed a sophisticated financial management application using the MERN stack. Features include real-time expense tracking, interactive data visualizations for budget analysis, and secure user authentication.', ['MongoDB', 'Express', 'React', 'Node.js', 'Chart.js'], 'https://finscope-pro.vercel.app/')">
+    <div class="topic">FinScope Pro</div>
+    <p>Comprehensive Financial Analytics Platform with data visualization.</p>
+    <span class="view-btn">View Details →</span>
+  </div>
+
+  <div class="project-box bg-resort" onclick="openModal('Azure Pines', 'Engineered a scalable MERN stack application deployed on Vercel/Render with dynamic content integration and responsive UI for booking resorts.', ['MERN Stack', 'Vercel', 'Render'], 'https://yash24032005.github.io/azure-pines-frontend/')">
+    <div class="topic">Azure Pines Resort</div>
+    <p>Smart full-stack application for booking resorts and hotel rooms.</p>
+    <span class="view-btn">View Details →</span>
+  </div>
+
+  <div class="project-box bg-quiz" onclick="openModal('Brain Buster', 'Built an innovative digital tool designed for interactive quiz administration. Provides a seamless experience for educators and learners with a real-time responsive UI.', ['HTML', 'CSS', 'JavaScript'], 'https://brain-buster-alpha.vercel.app/')">
+    <div class="topic">Brain Buster</div>
+    <p>An inquisitive quiz platform designed to facilitate digital learning.</p>
+    <span class="view-btn">View Details →</span>
+  </div>
+
+  <div class="project-box bg-portfolio" onclick="openModal('Personal Portfolio', 'Developed a highly responsive professional portfolio website featuring glassmorphism effects and custom modal windows.', ['HTML', 'CSS', 'JavaScript'], 'https://yash24032005.github.io/')">
+    <div class="topic">Modern Portfolio</div>
+    <p>Interactive personal portfolio with custom JavaScript modals.</p>
+    <span class="view-btn">View Details →</span>
+  </div>
+</div>
+
+  <div id="projectModal" class="modal-overlay">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close-modal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <div id="modalTags" class="modal-tags"></div>
+      <p id="modalDesc"></p>
+      <a id="modalLink" href="#" target="_blank" class="demo-btn">Live Demo</a>
+    </div>
+  </div>
+</section>
 
   <!-- My Services Section Start -->
   <section class="services" id="services">
